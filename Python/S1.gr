@@ -1,0 +1,219 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+1024	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+32	S1	NP VPComplex End
+8	S1	NPPl VPComplexPl End
+2	S1	VPComplex End
+5	S1	VPComplexPl End
+
+3	VPComplex	VP
+4	VPComplex	VP NextSeg
+
+3	VPComplexPl	VPPl
+2	VPComplexPl	VPPl NextSeg
+
+96	NextSeg	NP
+1	NextSeg	NPPl
+128	NextSeg	NP VPComplex
+64	NextSeg	NPPl VPComplexPl
+
+1152	NP	B4Noun NP
+1024	NP	Noun
+1536	NP	Person
+384	NP	NounProp
+256	NP	Pro
+2	NP	There
+256	NP	WP
+64	NP	WP NP
+64	NP	NP WP
+2	NP	SubP NP
+64	NP	NP PP
+64	NP	NP Pause NP
+64	NP	NP Pause NPPl
+1	NP	NP ConjP
+64	NP	ConjP NP
+
+192	NPPl	B4Noun NPPl
+256	NPPl	NounPl
+320	NPPl	ProPl
+2	NPPl	WP
+64	NPPl	WP NPPl
+2	NPPl	NPPl WP
+64	NPPl	SubP NPPl
+2	NPPl	NPPl PP
+64	NPPl	ConjP NPPl
+64	NPPl	NPPl ConjP
+128	NPPl	NP ConjP NP
+2	NPPl	NP ConjP NPPl
+1	NPPl	NPPl ConjP NP
+1	NPPl	NPPl ConjP NPPl
+
+1024	B4Noun	Det
+1	B4Noun	Det NumP
+256	B4Noun	Det AdjP
+2	B4Noun	Det AdjCompP
+2	B4Noun	Det AdjSupP
+256	B4Noun	NumP
+2	B4Noun	AdjP
+4	B4Noun	AdjCompP
+2	B4Noun	AdjSupP
+4	B4Noun	AdvP
+2	B4Noun	Neg
+160	B4Noun	PossP
+2	B4Noun	PossPPl
+4	B4Noun	B4Noun ConjP B4Noun
+
+448	VP	VerbTrans3
+1	VP	VerbTrans3 VerbPastPart
+2	VP	VerbTrans3 VerbPastPart VerbGer
+2	VP	VerbTrans3 VerbGer
+256	VP	VerbInt3
+320	VP	Verb
+64	VP	Verb VerbPastPart
+2	VP	Verb VerbPastPart VerbPastPart
+2	VP	Verb VerbPastPart VerbGer
+320	VP	VerbPast
+64	VP	VerbPast VerbPastPart
+1	VP	VerbPast VerbPastPart VerbPastPart
+2	VP	VerbPast VerbPastPart VerbGer
+64	VP	VerbGer
+256	VP	Does
+2	VP	Does Verb
+1	VP	Does VerbGer
+1	VP	Does Neg
+2	VP	Does Neg Verb
+4	VP	Does Neg VerbGer
+2	VP	Modal
+1	VP	Modal Verb
+64	VP	Modal Verb VerbPastPart
+64	VP	Modal Verb VerbPastPart VerbPastPart
+64	VP	Modal Verb VerbPastPart VerbGer
+64	VP	Modal Verb VerbGer
+512	VP	VP PP
+64	VP	VP PP VP
+128	VP	VP ConjP
+64	VP	VP ConjP VP
+2	VP	Neg VP
+4	VP	VP Neg
+64	VP	VP AftVerb
+
+512	VPPl	Verb3Pl
+1	VPPl	Verb3Pl VerbPastPart
+3	VPPl	Verb3Pl VerbPastPart VerbPastPart
+2	VPPl	Verb3Pl VerbPastPart VerbGer
+64	VPPl	Verb3Pl VerbGer
+2	VPPl	VerbPast
+2	VPPl	VerbPast VerbPastPart
+2	VPPl	VerbPast VerbPastPart VerbPastPart
+4	VPPl	VerbPast VerbPastPart VerbGer
+64	VPPl	VerbGer
+64	VPPl	Do
+2	VPPl	Do Verb3Pl
+4	VPPl	Do VerbGer
+2	VPPl	Do Neg
+64	VPPl	Do Neg Verb3Pl
+2	VPPl	Do Neg VerbGer
+2	VPPl	Modal Do
+2	VPPl	Modal
+128	VPPl	Modal Verb3Pl
+4	VPPl	Modal Verb3Pl VerbPastPart
+4	VPPl	Modal Verb3Pl VerbPastPart VerbPastPart
+4	VPPl	Modal Verb3Pl VerbPastPart VerbGer
+256	VPPl	VPPl PP
+4	VPPl	VPPl PP VPPl
+4	VPPl	VPPl ConjP
+2	VPPl	VPPl ConjP VPPl
+2	VPPl	Neg VPPl
+4	VPPl	VPPl Neg
+128	VPPl	VPPl AftVerb
+
+64	AftVerb	AdjP
+1	AftVerb	AdjCompP
+1	AftVerb	AdjSupP
+128	AftVerb	AdvP
+2	AftVerb	To Verb
+
+512	PP	Prep NP
+64	PP	Prep NPPl
+256	PP	To NP
+2	PP	To NPPl
+2	PP	Prep ConjP Prep NPPl
+1	PP	Prep ConjP To NP
+4	PP	Prep ConjP To NPPl
+4	PP	To ConjP Prep NP
+4	PP	To ConjP Prep NPPl
+2	PP	PP ConjP PP
+2	PP	Prep ConjP Prep NP
+
+256	NumP	Num
+1	NumP	Num NumP
+1	NumP	Num ConjP NumP
+1	NumP	Neg NumP
+
+256	AdjP	Adj
+1	AdjP	Adj AdjP
+1	AdjP	Adj ConjP AdjP
+1	AdjP	Neg AdjP
+
+1	AdjCompP	AdjComp
+1	AdjCompP	AdjComp AdjCompP
+1	AdjCompP	AdjComp ConjP AdjCompP
+1	AdjCompP	Neg AdjCompP
+
+1	AdjSupP	AdjSup
+1	AdjSupP	AdjSup AdjSupP
+1	AdjSupP	AdjSup ConjP AdjSupP
+1	AdjSupP	Neg AdjSupP
+
+64	AdvP	Adv
+1	AdvP 	Adv ConjP AdvP
+1	AdvP	Neg AdjP
+
+256	WAdvP	WAdv
+1	WAdvP	WAdv ConjP WAdvP
+
+64	ConjP	Pause
+256	ConjP	ConjCoord
+1	ConjP	Pause ConjCoord
+
+64	SubP	ConjSub
+1	SubP	ConjSub SubP
+1	SubP	Neg SubP
+
+4	PossP	Noun Poss
+2	PossP	Person Poss
+1	PossP	NounProp Poss
+1024	PossP	ProPoss
+32	PossP	WProPoss
+
+1	PossPPl	ProPossPl
+1	PossPPl	WProPoss
+
+128	WDetP	WDet
+1	WDetP	WDet Modal
+1	WDetP	Neg WDetP
+
+1	WAdvP	WAdv
+1	WAdvP	WAdvP Modal
+1	WAdvP	SubP ConjP WAdvP
+1	WAdvP	WAdv ConjP WAdvP
+1	WAdvP	Neg WAdvP
+
+256	WProP	WPro
+1	WProP	WPro Modal
+1	WProP	WProPoss
+1	WProP	WPro ConjP WProP
+1	WProP	WProPoss ConjP WProP
+1	WProP	Neg WProP
+
+64	WP	WAdvP
+128	WP	WProP
+32	WP	WDetP
+1	WP	SubP WP
+1	WP	WP SubP
+

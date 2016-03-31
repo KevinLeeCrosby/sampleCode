@@ -1,0 +1,328 @@
+# This is a hand-generated set of preterminal rules.
+# It specifies a simple tag set which will be handled by the S2
+# grammar and which can (though doesn't necessarily need to be)
+# handled by the S1 grammar.
+
+# The weights given here may be changed, but no new vocabulary
+# items are to be added.
+
+# Miscellaneous items that don't fit into any of our simple tags are
+# given to Misc.  You will want to develop your own tags for these!
+
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+192	Noun	castle
+320	Noun	king
+1	Noun	defeater
+2	Noun	sovereign
+64	Noun	servant
+2	Noun	corner
+2	Noun	land
+2	Noun	quest
+64	Noun	chalice
+4	Noun	master
+64	Noun	horse
+64	Noun	fruit
+64	Noun	swallow
+2	Noun	sun
+4	Noun	winter
+2	Noun	coconut
+1	Noun	pound
+1	Noun	husk
+64	Noun	home
+2	Noun	weight
+64	Noun	story
+
+# Determiners.
+256	Det	a
+1	Det	another
+2	Det	any
+2	Det	each
+2	Det	every
+2	Det	no
+128	Det	that
+768	Det	the
+2	Det	this
+
+# Prepositions.
+1	Prep	above
+1	Prep	across
+32	Prep	at
+2	Prep	below
+64	Prep	by
+32	Prep	for
+32	Prep	from
+1	Prep	into
+32	Prep	near
+32	Prep	of
+1	Prep	on
+2	Prep	over
+2	Prep	through
+64	Prep	with
+
+# Proper nouns.  Note that our Proper tag is just for people.
+1536	Person	Arthur
+512	Person	Guinevere
+256	Person	Sir Lancelot
+3	Person	Sir Bedevere
+256	Person	Zoot
+8	Person	Dingo
+512	Person	Patsy
+4	Person	Uther Pendragon
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1	VerbTrans3	has
+1	VerbTrans3	covers
+128	VerbTrans3	is
+64	VerbTrans3	drinks
+1	VerbTrans3	carries
+32	VerbTrans3	rides
+
+# End-of-sentence.
+1	End	!
+8	End	.
+2	End	?
+
+# Pauses.
+512	Pause	,
+1	Pause	...
+1	Pause	--
+1	Pause	;
+1	Pause	:
+
+# Coordinating conjunctions.
+64	ConjCoord	and
+1	ConjCoord	but
+32	ConjCoord	or
+32	ConjCoord	either
+32	ConjCoord	nor
+32	ConjCoord	neither
+1	ConjCoord	so
+
+# Numbers.
+32	Num	eight
+32	Num	five
+1	Num	one
+1	Num	5.5
+32	Num	sixty
+1	Num	5,000
+
+# Expletive.
+1	There	there
+
+# Subordinating conjunctions.
+2	ConjSub	that
+2	ConjSub	so
+1	ConjSub	while
+256	ConjSub	because
+8	ConjSub	if
+
+# Modals.
+2	Modal	can
+2	Modal	could
+2	Modal	may
+128	Modal	might
+2	Modal	must
+4	Modal	ought
+1	Modal	shall
+64	Modal	should
+256	Modal	will
+2	Modal	would
+
+
+# Adjectives.
+2	Adj	bloody
+1	Adj	weary
+1	Adj	unable
+32	Adj	trusty
+1	Adj	further
+1	Adj	sacred
+2	Adj	tropical
+1	Adj	indigenous
+1	Adj	temperate
+1	Adj	hot
+1	Adj	lucky
+1	Adj	simple
+32	Adj	tiny
+32	Adj	hard
+2	Adj	sensational
+2	Adj	comparable
+2	Adj	angolian
+32	Adj	yellow
+2	Adj	plodding
+
+# Comparative adjectives.
+1	AdjComp	bloodier
+1	AdjComp	wearier
+1	AdjComp	trustier
+1	AdjComp	hotter
+1	AdjComp	simpler
+1	AdjComp	tinier
+1	AdjComp	harder
+
+# Superlative adjectives.
+1	AdjSup	bloodiest
+1	AdjSup	weariest
+1	AdjSup	trustiest
+1	AdjSup	hottest
+1	AdjSup	simplest
+1	AdjSup	tiniest
+1	AdjSup	hardest
+
+# Plural nouns.
+64	NounPl	coconuts
+2	NounPl	halves
+2	NounPl	snows
+1	NounPl	mountains
+2	NounPl	areas
+64	NounPl	strangers
+64	NounPl	inches
+2	NounPl	snakes
+2	NounPl	ants
+64	NounPl	nights
+
+# More proper nouns, not people.
+
+4	NounProp	Camelot
+1	NounProp	England
+1	NounProp	Holy Grail
+1	NounProp	Round Table
+
+# Plural proper nouns.
+1	NounPropPl	Britons
+1	NounPropPl	Saxons
+
+# Personal pronouns.
+32	Pro	he
+2	Pro	her
+1	Pro	him
+64	Pro	it
+1	Pro	one
+32	Pro	she
+1	ProPl	them
+64	ProPl	they
+
+
+# Possessive personal pronouns
+1	ProPoss	her
+1024	ProPoss	his
+16	ProPoss	its
+1	ProPossPl	their
+
+# Adverbs.
+1	Adv	again
+1	Adv	already
+1	Adv	currently
+64	Adv	frequently
+64	Adv	precisely
+2	Adv	south
+4	Adv	successfully
+2	Adv	unfortunately
+
+# 'do'/'does'
+1	Do	do
+1	Does	does
+
+# 'to'
+1	To	to
+
+# 'not'
+1	Neg	not
+
+# Verbs (base form).
+128	Verb	have
+2	Verb	speak
+2	Verb	cover
+64	Verb	be
+64	Verb	ride
+2	Verb	drink
+2	Verb	grow
+32	Verb	carry
+32	Verb	suggest
+1	Verb	migrate
+2	Verb	know
+
+# Verbs (past tense).
+2	VerbPast	had
+1	VerbPast	spoke
+1	VerbPast	covered
+64	VerbPast	was
+2	VerbPast	were
+32	VerbPast	rode
+64	VerbPast	drank
+1	VerbPast	grew
+1	VerbPast	carried
+32	VerbPast	suggested
+1	VerbPast	migrated
+2	VerbPast	knew
+
+# Verbs (present participles).
+2	VerbGer	having
+1	VerbGer	speaking
+64	VerbGer	covering
+1	VerbGer	being
+256	VerbGer	riding
+2	VerbGer	drinking
+4	VerbGer	growing
+4	VerbGer	carrying
+64	VerbGer	suggesting
+4	VerbGer	migrating
+4	VerbGer	knowing
+
+# Verbs (past participle).
+1	VerbPastPart	had
+2	VerbPastPart	spoken
+32	VerbPastPart	covered
+64	VerbPastPart	been
+2	VerbPastPart	ridden
+1	VerbPastPart	drunk
+1	VerbPastPart	grown
+64	VerbPastPart	carried
+2	VerbPastPart	suggested
+2	VerbPastPart	migrated
+32	VerbPastPart	known
+
+# More third person singular verbs.
+2	VerbInt3	speaks
+4	VerbInt3	grows
+2	VerbInt3	goes
+4	VerbInt3	migrates
+1	VerbInt3	suggests
+512	VerbInt3	knows
+
+# Verbs (present, plural, third person).
+1	Verb3Pl	have
+64	Verb3Pl	speak
+1	Verb3Pl	cover
+64	Verb3Pl	are
+1	Verb3Pl	ride
+1	Verb3Pl	drink
+16	Verb3Pl	grow
+2	Verb3Pl	carry
+1	Verb3Pl	suggest
+32	Verb3Pl	migrate
+16	Verb3Pl	know
+
+# Wh-determiners.
+64	WDet	that
+1	WDet	what
+1	WDet	which
+
+# Wh-pronouns.
+1	WPro	what
+1	WPro	who
+
+# Wh possessive pronoun.
+1	WProPoss	whose
+
+# Wh-adverbs
+1	WAdv	how
+16	WAdv	when
+1	WAdv	where
+16	WAdv	why
+
+
+# Possessive marker.
+1	Poss	's

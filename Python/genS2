@@ -1,0 +1,17 @@
+#!/bin/tcsh -f
+
+set tags=`cat tags.txt`
+
+printf "20\tS2\n"
+foreach a ($tags)
+  printf "20\tS2\t_$a\n"
+end # foreach a
+
+foreach a ($tags)
+  printf "20\t_$a\t$a\n"
+  foreach b ($tags)
+    printf "20\t_$a\t$a _$b\n"
+  end # foreach b
+end # foreach a
+
+
